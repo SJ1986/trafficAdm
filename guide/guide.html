@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../resource/css/guide.css">
+    <link rel="stylesheet" href="../resource/css/lib/prism.css">
+    <script type="text/javascript" src="../resource/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../node_modules/simplebar/dist/simplebar.js"></script>
+    <script type="text/javascript" src="../resource/js/guide.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/prism.js"></script>
+    <title>자율주행 데이터 공유센터 코딩가이드</title>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="header__inner">
+                <h1 class="header__logo">
+                    자율주행 데이터 공유센터 GUIDE
+                </h1>
+            </div>
+        </header>
+        <section class="container">
+            <div class="container__inner">
+                <div class="content">
+                    <div class="content__inner p-20">
+                        <div class="el-link-wrap ta-r">
+                            <a href="../index.html" class="el-link--index" target="_blank">INDEX PAGE</a>
+                        </div>
+                        <div class="el-tab-wrap">
+                            <div class="el-tab__inner">
+                                <div class="el-tab__link">
+                                    <ul>
+                                        <li class="is-open" data-id="tab-guide--0">
+                                            <button type="button">
+                                                기본 가이드
+                                            </button>
+                                        </li>
+                                        <li data-id="tab-guide--1">
+                                            <button type="button">
+                                                LAYOUT
+                                            </button>
+                                        </li>
+                                        <li data-id="tab-guide--2">
+                                            <button type="button">
+                                                LIST
+                                            </button>
+                                        </li>
+                                        <li data-id="tab-guide--3">
+                                            <button type="button">
+                                                BOX
+                                            </button>
+                                        </li>
+                                        <li data-id="tab-guide--4">
+                                            <button type="button">
+                                                BUTTON
+                                            </button>
+                                        </li>
+                                        <li data-id="tab-guide--5">
+                                            <button type="button">
+                                                ICON
+                                            </button>
+                                        </li>
+                                        <li data-id="tab-guide--6">
+                                            <button type="button">
+                                                FORM
+                                            </button>
+                                        </li>
+                                        <li data-id="tab-guide--7">
+                                            <button type="button">
+                                                FONT
+                                            </button>
+                                        </li>
+                                        <li data-id="tab-guide--8">
+                                            <button type="button">
+                                                TABLE
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 기본 가이드 -->
+                        <div class="el-tab__cont is-open" id="tab-guide--0">
+                            <h3 class="el-tab__tit">기본 가이드</h3>
+                            <div class="mt-20">
+                                <div class="el-box-tip">
+                                    신규 페이지 생성시 DOCTYPE은 HTML5이며, 파일 <strong>인코딩은 UTF-8</strong>로 생성한다.<br/>
+                                    페이지 생성 및 유지보수 진행시 하단 코드를 참고하여 진행한다.<br/>
+                                    추가되는 css는 <strong>ux-admin.css</strong> 하단에 추가되는 해당 매뉴의 css 를 위치한다.                                    
+                                </div>
+                                <div class="el-code-wrap">
+                                    <!-- 코드 삽입 -->
+                                    <pre class="language-html"><code>
+                                    &lt;!DOCTYPE html>
+                                    &lt;html lang="ko">
+
+                                    &lt;head>
+                                        &lt;meta charset="UTF-8">
+                                        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+                                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                        &lt;link rel="stylesheet" href="../resource/css/ux-admin.css">
+                                        &lt;script type="text/javascript" src="../resource/js/jquery-3.6.0.min.js">&lt;/script>
+                                        &lt;script type="text/javascript" src="../node_modules/simplebar/dist/simplebar.js">&lt;/script>
+                                        &lt;script type="text/javascript" src="../resource/js/common.js">&lt;/script>
+                                        &lt;script type="text/javascript" src="../resource/js/main.js">&lt;/script>
+                                        &lt;title>자율주행 데이터 공유센터&lt;/title>
+                                    &lt;/head>
+                                    &lt;body>
+                                        &lt;div class="wrap">
+                                            &lt;!-- header -->
+                                            &lt;header class="header">
+                                                &lt;div class="header__inner">&lt;/div>
+                                            &lt;/header>
+                                            &lt;!-- container -->
+                                            &lt;section class="container">
+                                                &lt;div class="container__inner">
+                                                    &lt;div class="content">
+                                                        &lt;div class="content__inner">
+                                                        &lt;/div>
+                                                    &lt;/div>
+                                                &lt;/div>
+                                            &lt;/section>
+                                            &lt;!-- footer -->
+                                            &lt;footer>&lt;/footer>
+                                        &lt;/div>
+                                    &lt;/body>
+                                    &lt;/html>
+                                    </code></pre>
+                                    <!-- 코드 삽입 -->
+                                </div>
+                            </div>
+
+                            <h3 class="el-tab__tit mt-50">CSS 정의</h3>
+                            <div class="mt-20">
+                                <div class="el-box-tip">
+                                    css 추가는 각 페이지 별로 따로 만들어 연결하되 공통 스타일은 <strong>common.css</strong> 쪽, 고정 style은 <strong>fix.css</strong>에 포함한다.<br/>
+                                    페이지 별 css는 <strong>sub__페이지명.css</strong>로 만들되 페이지별 head쪽 ux-admin.css 아래에 선언한다.<br/>
+                                    plugIn css의 경우 css폴더 내 lib 폴더에 넣어서 연결한다.
+                                </div>
+                                <div class="el-code-wrap">
+                                    <!-- 코드 삽입 -->
+                                    <pre class="language-html"><code>
+                                    &lt;link rel="stylesheet" href="../resource/css/ux-admin.css">
+                                    &lt;link rel="stylesheet" href="../resource/css/sub__manage.css">
+                                    </code></pre>
+                                    <!-- 코드 삽입 -->
+                                </div>
+                            </div>
+
+                            <h3 class="el-tab__tit mt-50">주석 처리</h3>
+                            <div class="mt-20">
+                                <div class="el-box-tip">
+                                    html 기본 주석처리
+                                </div>
+                                <div class="el-code-wrap">
+                                    <!-- 코드 삽입 -->
+                                    <pre class="language-html"><code>
+                                    &lt;!-- 주석 시작 -->
+                                    &lt;!-- // 주석 시작 --> 
+                                    &lt;!-- content 2018-XX-XX 수정 -->
+                                    &lt;!-- // content 2018-XX-XX 수정 --> 
+                                    </code></pre>
+                                    <!-- 코드 삽입 -->
+                                </div>
+                            </div>
+
+                            <h3 class="el-tab__tit mt-50">css 처리</h3>
+                            <div class="mt-20">
+                                <div class="el-box-tip">
+                                    css 기본 주석처리
+                                </div>
+                                <div class="el-code-wrap">
+                                    <!-- 코드 삽입 -->
+                                    <pre class="language-html"><code>
+                                    /* 메뉴 네임 */
+                                    /* 메뉴 2018-XX-XX 수정 */
+                                    // 메뉴 네임
+                                    </code></pre>
+                                    <!-- 코드 삽입 -->
+                                </div>
+                            </div>
+
+                            <h3 class="el-tab__tit mt-50">폴더 구조</h3>
+                            <div class="mt-20">
+                                <div class="directory-tree-wrap">
+                                    <ul class="directory-tree__folder">
+                                        <li>admin
+                                            <ul class="directory-tree__folder">
+                                                <li>guide
+                                                    <ul class="directory-tree__file">
+                                                        <li>guide__main.html</li>
+                                                        <li>guide.html</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="directory-tree__folder">
+                                                <li>node_modules
+                                                    <ul class="directory-tree__folder">
+                                                        <li>@euid</li>
+                                                    </ul>
+                                                    <ul class="directory-tree__folder">
+                                                        <li>@juggle</li>
+                                                    </ul>
+                                                    <ul class="directory-tree__folder">
+                                                        <li>@toast-ui</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="directory-tree__folder">
+                                                <li>resource
+                                                    <ul class="directory-tree__folder">
+                                                        <li>css
+                                                            <ul class="directory-tree__folder">
+                                                                <li>lib
+                                                                    <ul class="directory-tree__file">
+                                                                        <li>preism.css</li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="directory-tree__file">
+                                                                <li>common.css</li>
+                                                                <li>font.css</li>
+                                                                <li>guide.css</li>
+                                                                <li>main.css</li>
+                                                                <li>reset.css</li>
+                                                                <li>responsive.css</li>
+                                                                <li>sub__mainges.css</li>
+                                                                <li>ui-button.css</li>
+                                                                <li>ui-fix.css</li>
+                                                                <li>ui-form.css</li>
+                                                                <li>ui-layout.css</li>
+                                                                <li>ui-plugin.css</li>
+                                                                <li>ui-table.css</li>
+                                                                <li>ux-admin.css</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="directory-tree__folder">
+                                                        <li>font</li>
+                                                    </ul>
+                                                    <ul class="directory-tree__folder">
+                                                        <li>image
+                                                            <ul class="directory-tree__folder">
+                                                                <li>common
+                                                                    <ul class="directory-tree__folder">
+                                                                        <li>icon</li>
+                                                                    </ul>
+                                                                    <ul class="directory-tree__folder">
+                                                                        <li>img</li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>                                                        
+                                                            <ul class="directory-tree__folder">
+                                                                <li>main</li>
+                                                            </ul>                                                        
+                                                            <ul class="directory-tree__folder">
+                                                                <li>sub</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="directory-tree__folder">
+                                                        <li>js
+                                                            <ul class="directory-tree__folder">
+                                                                <li>lib
+                                                                    <ul class="directory-tree__file">
+                                                                        <li>prism.js</li>
+                                                                        <li>tableHeadFixer.js</li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="directory-tree__file">
+                                                                <li>common.js</li>
+                                                                <li>guide.js</li>
+                                                                <li>jquery-3.6.0.min.js</li>
+                                                                <li>main.js</li>
+                                                                <li>sub.js</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="directory-tree__folder">
+                                                        <li>scss</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="directory-tree__folder">
+                                                <li>sub
+                                                    <ul class="directory-tree__folder">
+                                                        <li>
+                                                            intro
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="directory-tree__folder">
+                                                        <li>
+                                                            manage
+                                                            <ul class="directory-tree__file">
+                                                                <li>approve.html</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="directory-tree__file">
+                                                <li>index.html</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LAYOUT -->
+                        <div class="el-tab__cont" id="tab-guide--1">
+                            <h3 class="el-tab__tit">LAYOUT</h3>
+                            <div class="mt-20">
+                                <div class="el-box-tip">
+                                    <strong>lay-box-wrap</strong> 클래스로 묶고 <strong>lay-boxItem</strong> 으로 각 부분 처리 <strong>lay-item--넓이</strong> 로 1600px 이하에서 고정<br/>
+                                    <strong>grids</strong> 를 <strong>lay-box-wrap</strong> 과 동일 선상에 묶고 <strong>lay-boxItem</strong> 쪽에 <strong>grids__col-넓이</strong> 로 1600px 이상에서 %로 조정
+                                </div>
+                                <div class="el-txt">
+                                    <a href="guide__main.html" class="el-txt-7 el-underline" target="_blank">기본 레이아웃</a>
+                                </div>
+
+                                <div class="el-example lay-item--1600">
+                                    <div class="lay-box-wrap grids">
+                                        <div class="lay-boxItem lay-boxItem--index lay-item--300 grids__col-2 bgc--lightNavy" style="background-color:#104f92;color:#fff;">
+                                            main - index - col2
+                                        </div>
+                                        <div class="lay-boxItem lay-boxItem--index lay-item--784 grids__col-6 bgc--greenBlue" style="background-color:#104f92;color:#fff;">
+                                            main - index - col6
+                                        </div>
+                                        <div class="lay-boxItem lay-boxItem--index lay-item--456 grids__col-4 bgc--steelBlue" style="background-color:#104f92;color:#fff;">
+                                            main - index - col4
+                                        </div>
+                                        <div class="lay-boxItem lay-item--775 grids__col-6">
+                                            main - boxItem - col6
+                                        </div>
+                                        <div class="lay-boxItem lay-item--775 grids__col-6">
+                                            main - boxItem - col6
+                                        </div>
+                                        <div class="lay-boxItem lay-item--775 grids__col-6">
+                                            main - boxItem - col6
+                                        </div>
+                                        <div class="lay-boxItem lay-item--775 grids__col-6">
+                                            main - boxItem - col6
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="el-code-wrap">
+                                    <!-- 코드 삽입 -->
+                                    <pre class="language-html"><code>
+                                    &lt;div class="lay-box-wrap grids">
+                                    &lt;div class="lay-boxItem lay-boxItem--index lay-item--300 grids__col-2 bgc--lightNavy">
+                                        main - index - col2
+                                    &lt;/div>
+                                    &lt;div class="lay-boxItem lay-boxItem--index lay-item--784 grids__col-6 bgc--greenBlue">
+                                        main - index - col6
+                                    &lt;/div>
+                                    &lt;div class="lay-boxItem lay-boxItem--index lay-item--456 grids__col-4 bgc--steelBlue">
+                                        main - index - col4
+                                    &lt;/div>
+                                    &lt;div class="lay-boxItem lay-item--775 grids__col-6">
+                                        main - boxItem - col6
+                                    &lt;/div>
+                                    &lt;div class="lay-boxItem lay-item--775 grids__col-6">
+                                        main - boxItem - col6
+                                    &lt;/div>
+                                    &lt;div class="lay-boxItem lay-item--775 grids__col-6">
+                                        main - boxItem - col6
+                                    &lt;/div>
+                                    &lt;div class="lay-boxItem lay-item--775 grids__col-6">
+                                        main - boxItem - col6
+                                    &lt;/div>
+                                    &lt;/div>
+                                    </code></pre>
+                                    <!-- 코드 삽입 -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LIST -->
+                        <div class="el-tab__cont" id="tab-guide--2">
+                            <h3 class="el-tab__tit">NAV</h3>
+                            <div class="mt-20">
+                                <div class="el-box-tip">
+                                    header 상단 오른쪽에 위치
+                                </div>
+                                <div class="el-example lay-item--1600 mt-30">
+                                    <article class="header__login">
+                                        <div class="login login--user">
+                                            <p class="login__name" style="color:#a4a9b6;">
+                                                관리자<span>님</span>
+                                            </p>
+                                            <button type="button" class="btn login__btn" title="로그인">
+                                                <img src="../resource/image/common/icon/icon-locker.png" alt="">
+                                            </button>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="el-code-wrap">
+                                    <!-- 코드 삽입 -->
+                                    <pre class="language-html"><code>
+                                    &lt;article class="header__login">
+                                    &lt;div class="login login--user">
+                                        &lt;p class="login__name">
+                                            관리자&lt;span>님&lt;/span>
+                                        &lt;/p>
+                                        &lt;button type="button" class="btn login__btn" title="로그인">
+                                            &lt;img src="resource/image/common/icon/icon-locker.png" alt="">
+                                        &lt;/button>
+                                    &lt;/div>
+                                    &lt;/article></code>
+                                    </pre>
+                                </div>
+                            </div>
+
+                            <h3 class="el-tab__tit mt-50">ITEM 타이틀</h3>
+                            <div class="mt-20">
+                                <div class="el-box-tip">
+                                    boxitem 상단 타이틀 + reset 버튼
+                                </div>
+                                <div class="el-example lay-item--1600 mt-30">
+                                    <h5 class="boxItem__tit">
+                                        데이터 사용 현황
+                                        <button type="button" class="boxItem__reset">
+                                            <img src="../resource/image/common/icon/icon-reset.png" alt="">
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div class="el-code-wrap">
+                                    <!-- 코드 삽입 -->
+                                    <pre class="language-html"><code>
+                                    &lt;h5 class="boxItem__tit">
+                                    데이터 사용 현황
+                                    &lt;button type="button" class="boxItem__reset">
+                                        &lt;img src="resource/image/common/icon/icon-reset.png" alt="">
+                                    &lt;/button>
+                                    &lt;/h5></code>
+                                    </pre>
+                                </div>
+                            </div>
+
+                            <div class="el-line--gray el-border--dashed"></div>
+
+
+                        </div>
+
+                        <!-- BOX -->
+                        <div class="el-tab__cont" id="tab-guide--3">
+                            <h3 class="el-tab__tit">TITLE</h3>
+                            <div class="mt-20">
+                                <div class="el-box-tip">
+                                    tip
+                                </div>
+                                <div class="el-txt">
+                                    txt
+                                </div>
+
+                                <div class="el-example lay-item--1600">
+                                    example
+                                </div>
+                                <div class="el-code-wrap">
+                                    <!-- 코드 삽입 -->
+                                    <pre class="language-html" style="margin-top:20px;"><code>
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BUTTON -->
+                        <div class="el-tab__cont" id="tab-guide--4">
+                            <h3 class="el-tab__tit">TITLE</h3>
+                            <div class="mt-20">
+                                <div class="el-box-tip">
+                                    tip
+                                </div>
+                                <div class="el-txt">
+                                    txt
+                                </div>
+
+                                <div class="el-example lay-item--1600">
+                                    example
+                                </div>
+                                <div class="el-code-wrap">
+                                    <!-- 코드 삽입 -->
+                                    <pre class="language-html" style="margin-top:20px;"><code>
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ICON -->
+                        <div class="el-tab__cont" id="tab-guide--5">
+                            <h3 class="el-tab__tit">ICON TOOL BOX</h3>
+                            <div class="mt-20">
+                                <div class="el-box-tip">
+                                    tool box
+                                </div>
+                                <div class="el-example lay-item--1600 mt-30">
+                                    <div class="el-box-tool d-flex">
+                                        <button type="button" class="box-tool__btn boxItem__reset">
+                                            <img src="../resource/image/common/icon/icon-reset.png" alt="">
+                                        </button>
+                                        <button type="button" class="box-tool__btn boxItem__down">
+                                            <img src="../resource/image/common/icon/icon-down.png" alt="">
+                                        </button>
+                                        <button type="button" class="box-tool__btn boxItem__sch">
+                                            <img src="../resource/image/common/icon/icon-search.png" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="el-code-wrap">
+                                    <!-- 코드 삽입 -->
+                                    <pre class="language-html"><code>
+                                    &lt;div class="el-box-tool d-flex">
+                                    &lt;button type="button" class="box-tool__btn boxItem__reset">
+                                        &lt;img src="../resource/image/common/icon/icon-reset.png" alt="">
+                                    &lt;/button>
+                                    &lt;button type="button" class="box-tool__btn boxItem__down">
+                                        &lt;img src="../resource/image/common/icon/icon-down.png" alt="">
+                                    &lt;/button>
+                                    &lt;button type="button" class="box-tool__btn boxItem__sch">
+                                        &lt;img src="../resource/image/common/icon/icon-search.png" alt="">
+                                    &lt;/button>
+                                    &lt;/div></code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FORM -->
+                        <div class="el-tab__cont" id="tab-guide--6">
+                            <h3 class="el-tab__tit">SELECT</h3>
+                            <div class="mt-20">
+                                <div class="el-box-tip">
+                                    custom select 로 기존 select option을 따르지 않고<br/>
+                                    button + ul 로 만들었음.
+                                </div>
+
+                                <div class="el-example lay-item--1600">
+                                    <div class="el-form custom-sel lay-item--200 mt-30">
+                                        <button type="button" class="custom-sel__btn" title="승인요청 구분 선택">
+                                            <span>선택</span>
+                                            <img src="../../resource/image/common/icon/icon-clampB--down.png" alt="">
+                                        </button>
+                                        <ul class="custom-sel__list">
+                                            <li>임시운행번호 등록요청</li>
+                                            <li>text1</li>
+                                            <li>text2</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="el-code-wrap">
+                                    <!-- 코드 삽입 -->
+                                    <pre class="language-html"><code>
+                                    &lt;div class="el-form custom-sel lay-item--200 mt-30">
+                                    &lt;button type="button" class="custom-sel__btn" title="승인요청 구분 선택">
+                                        &lt;span>선택&lt;/span>
+                                        &lt;img src="../../resource/image/common/icon/icon-clampB--down.png" alt="">
+                                    &lt;/button>
+                                    &lt;ul class="custom-sel__list" style="display: none;">
+                                        &lt;li>임시운행번호 등록요청&lt;/li>
+                                        &lt;li>text1&lt;/li>
+                                        &lt;li>text2&lt;/li>
+                                    &lt;/ul>
+                                    &lt;/div></code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FONT -->
+                        <div class="el-tab__cont" id="tab-guide--7">
+                            <h3 class="el-tab__tit">TITLE</h3>
+                            <div class="mt-20">
+                                <div class="el-box-tip">
+                                    tip
+                                </div>
+                                <div class="el-txt">
+                                    txt
+                                </div>
+
+                                <div class="el-example lay-item--1600">
+                                    example
+                                </div>
+
+                                <!-- 코드 삽입 -->
+    <pre class="language-html" style="margin-top:20px;"><code>
+        </code>
+    </pre>
+                            </div>
+                        </div>
+
+                        <!-- TABLE -->
+                        <div class="el-tab__cont" id="tab-guide--8">
+                            <h3 class="el-tab__tit">TABLE</h3>
+                            <div class="mt-20">
+                                <div class="el-box-tip">
+                                    tip
+                                </div>
+                                <div class="el-txt">
+                                    txt
+                                </div>
+
+                                <div class="el-example lay-item--1600">
+                                    example
+                                </div>
+
+                                <!-- 코드 삽입 -->
+    <pre class="language-html" style="margin-top:20px;"><code>
+        </code>
+    </pre>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

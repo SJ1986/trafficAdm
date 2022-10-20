@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@euid/scss-mixins": "^0.2.0",
+    "@toast-ui/chart": "^4.4.3",
+    "simplebar": "^5.3.9"
+  },
+  "devDependencies": {
+    "flexbox-grid-mixins": "^0.3.3"
+  }
+}
