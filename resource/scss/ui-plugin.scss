@@ -2,7 +2,7 @@
 @import 'mixin';
 @import '../../node_modules/@euid/scss-mixins';
 @import '../../node_modules/flexbox-grid-mixins/sass/flexbox-grid-mixins';
-@import '../../node_modules/simplebar/dist/simplebar.css';
+@import 'lib/simplebar.css';
 
 /** plugin */
 .ui{
