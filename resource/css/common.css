@@ -117,6 +117,7 @@ html {
 .lnb-wrap {
   position: relative;
   width: auto;
+  height: 100vh;
   background-color: #172e57;
 }
 .lnb__cont {
