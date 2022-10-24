@@ -1,4 +1,4 @@
-@import '../../node_modules/simplebar/dist/simplebar.css';
+@import 'lib/simplebar.css';
 /** plugin */
 .ui-scroller {
   font-size: 0;
