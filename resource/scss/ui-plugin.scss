@@ -12,15 +12,20 @@
             display:none;
         }
         .simplebar{
-            &-scrollbar{
-                &::before{
-                    left:0;
-                    display:block;
-                    width:4px;
-                    height:100%;
-                    opacity: 1;
-                    background-color: #9da8bb;
-                    box-sizing:border-box;
+            &-track{
+                .simplebar{
+                    &-scrollbar{
+                        &::before{
+                            top:0;
+                            left:0;
+                            display:block;
+                            width:4px;
+                            height:100%;
+                            opacity: 1;
+                            background-color: #9da8bb;
+                            box-sizing:border-box;
+                        }
+                    }
                 }
             }
             &-track{

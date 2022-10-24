@@ -6,7 +6,8 @@
 .ui-scroller::-webkit-scrollbar {
   display: none;
 }
-.ui-scroller .simplebar-scrollbar::before {
+.ui-scroller .simplebar-track .simplebar-scrollbar::before {
+  top: 0;
   left: 0;
   display: block;
   width: 4px;
