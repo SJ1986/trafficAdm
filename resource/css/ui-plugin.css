@@ -6,6 +6,9 @@
 .ui-scroller::-webkit-scrollbar {
   display: none;
 }
+.ui-scroller .simplebar-track {
+  border-radius: 10px;
+}
 .ui-scroller .simplebar-track .simplebar-scrollbar::before {
   top: 0;
   left: 0;
