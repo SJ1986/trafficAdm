@@ -1,7 +1,7 @@
 @import 'lib/simplebar.css';
 /** plugin */
 .ui-scroller {
-  font-size: 0;
+  font-size: 0px;
 }
 .ui-scroller::-webkit-scrollbar {
   display: none;
