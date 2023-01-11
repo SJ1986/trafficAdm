@@ -30,26 +30,37 @@ $default-grid-gutter: 10px;
                 @include grid-col($col: $i, $grid-columns: $default-grid-columns, $gutter: $default-grid-gutter);
             }
         }
-    }
-    .lay{
-        &-boxItem{
-            &--index{
-                @at-root{
-                    &.grids{
-                        &__col-2{
-                            flex:0 0 calc(19.6666% - 10px)
-                        }
-                        &__col-6{
-                            flex:0 0 calc(50% - 10px)
-                        }
-                        &__col-4{
-                            flex:0 0 calc(30.3333% - 10px)
-                        }
+        &-bottom{
+            //width: 100%;
+            &.grids {
+                > .grids{
+                    &__col-6{
+                        width: calc(50% - 10px);
+                        flex:none;
                     }
                 }
             }
         }
     }
+    // .lay{
+    //     &-boxItem{
+    //         &--index{
+    //             @at-root{
+    //                 &.grids{
+    //                     &__col-2{
+    //                         flex:0 0 calc(19.6666% - 10px)
+    //                     }
+    //                     &__col-6{
+    //                         flex:0 0 calc(50% - 10px)
+    //                     }
+    //                     &__col-4{
+    //                         flex:0 0 calc(30.3333% - 10px)
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
 @include media-breakpoint-down(n-xl){
     .container{
@@ -70,6 +81,9 @@ $default-grid-gutter: 10px;
             &-wrap{
                 @include flex-c(row wrap);
                 @include margin(l -10 t -10);
+                &.grids-bottom{
+                    margin-top: 0px
+                }
             }
             &Item{
                 @include margin(l 10 t 10);

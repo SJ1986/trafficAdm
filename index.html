@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="resource/css/main.css">
     <script type="text/javascript" src="resource/js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="resource/js/lib/simplebar.js"></script>
+    <script type="text/javascript" src="resource/js/lib/isotope.pkgd.min.js"></script>
     <script type="text/javascript" src="resource/js/common.js"></script>
     <script type="text/javascript" src="resource/js/main.js"></script>
     <title>자율주행 데이터 공유센터</title>
@@ -149,7 +150,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="lay-boxItem lay-boxItem--index lay-item--784 grids__col-6 bgc--greenBlue">
+                            <div class="lay-boxItem lay-boxItem--index lay-item--784 grids__col-8 bgc--greenBlue">
                                 <div class="boxItem__inner boxItem-index">
                                     <span class="boxItem__img">
                                         <img src="resource/image/main/img-boxItem--index02.png" alt="">
@@ -181,30 +182,32 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="lay-boxItem lay-boxItem--index lay-item--456 grids__col-4 bgc--steelBlue">
+                            <div class="lay-boxItem lay-boxItem--index lay-item--456 grids__col-2 bgc--steelBlue">
                                 <div class="boxItem__inner boxItem-index">
                                     <span class="boxItem__img">
                                         <img src="resource/image/main/img-boxItem--index03.png" alt="">
-                                        <em class="boxItem__caption">데이터</em>
+                                        <em class="boxItem__caption">차량 플랫폼 공유</em>
                                     </span>
                                     <p class="boxItem__txt">
-                                        <span>건수</span>
+                                        <span>총 건수</span>
                                         <strong>
                                             1777
                                             <em>건</em>
                                         </strong>
 
                                     </p>
-                                    <p class="boxItem__txt">
+                                    <!-- <p class="boxItem__txt">
                                         <span>용량</span>
                                         <strong>
                                             1,247.2
                                             <em>GB</em>
                                         </strong>
 
-                                    </p>
+                                    </p> -->
                                 </div>
                             </div>
+                        </div>
+                        <div class="lay-box-wrap grids grids-bottom">
                             <div class="lay-boxItem lay-item--775 grids__col-6">
                                 <div class="boxItem__inner">
                                     <h5 class="boxItem__tit">
@@ -317,77 +320,196 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="lay-boxItem lay-item--775 grids__col-6">
+                            <div class="lay-boxItem lay-item--775 grids__col-6 lay-item--double">
                                 <div class="boxItem__inner">
                                     <h5 class="boxItem__tit">
-                                        사고발생
+                                        자율주행 플랫폼 공유
                                         <button type="button" class="boxItem__reset">
                                             <img src="resource/image/common/icon/icon-reset.png" alt="">
                                         </button>
                                     </h5>
                                     <div class="lay-table-wrap">
                                         <div class="lay-table__inner">
-                                            <div class="el-table-wrap">
-                                                <table
-                                                    class="el-table el-table--col el-table--accident el-table--acciList mt-10">
-                                                    <caption>데이터 사용 현황 테이블</caption>
-                                                    <colgroup>
-                                                        <col style="width:25%" />
-                                                        <col style="width:25%" />
-                                                        <col style="width:25%" />
-                                                        <col style="width:25%" />
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col" colspan="2">지난 주</th>
-                                                            <th scope="col" colspan="2">이번 주</th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="col">자율모드</th>
-                                                            <th scope="col">일반모드</th>
-                                                            <th scope="col">자율모드</th>
-                                                            <th scope="col">일반모드</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                            <div class="calendar-wrap mb-80">
+                                                <div class="calWrap mt_20">
+                                                    
+                                                    <div class="controlDate">
+                                                        <button type="button" class="datePrev" title="이전달로 이동">
+                                                            <img src="resource/image/common/icon/icon-calendar__prev.jpg"
+                                                                alt="">
+                                                        </button>
+                                                        <span class="year_mon">2023년 1월</span>
+                                                        <button type="button" class="dateNext" title="다음달로 이동">
+                                                            <img src="resource/image/common/icon/icon-calendar__next.jpg"
+                                                                alt="">
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendar-info">
+                                                        <div class="calendar-info__inner">
+                                                            <p class="res-status">예약현황: 총 <span class="totRecodeCnt">4</span>건</p>
+                                                            <div class="calendar-badge">
+                                                                <div class="calendar-badge__inner">
+                                                                    <p class="calendar-badge__list calendar-badge__list--blue"><span></span>ADVS-001</p>
+                                                                    <p class="calendar-badge__list calendar-badge__list--yellow"><span></span>ADVS-002</p>
+                                                                    <p class="calendar-badge__list calendar-badge__list--green"><span></span>ADVS-003</p>
+                                                                    <p class="calendar-badge__list calendar-badge__list--red"><span></span>ADVS-004</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="calendarSt mt_30 forIE">
+                                                        <div>
+                                                            <p>일</p>
+                                                        </div>
+                                                        <div>
+                                                            <p>월</p>
+                                                        </div>
+                                                        <div>
+                                                            <p>화</p>
+                                                        </div>
+                                                        <div>
+                                                            <p>수</p>
+                                                        </div>
+                                                        <div>
+                                                            <p>목</p>
+                                                        </div>
+                                                        <div>
+                                                            <p>금</p>
+                                                        </div>
+                                                        <div>
+                                                            <p>토</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>1</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>2</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>3</p>
+                                                            <div class="car-badge__item" style="width: 400%;">
+                                                                <div class="car-badge__list car-badge__list--blue"  ><a href="" class="car-badge__link" >ADVS-001</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>4</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>5</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>6</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>7</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>8</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar today">
+                                                            <p>9</p>
+                                                            <div class="car-badge__item" style="width: 200%;">
+                                                                <div class="car-badge__list car-badge__list--yellow"  ><a href="" class="car-badge__link" >ADVS-002</a></div>
+                                                            </div>
+                                                            <div class="car-badge__item" style="width: 200%; top: 24px;">
+                                                                <div class="car-badge__list car-badge__list--blue"  ><a href="" class="car-badge__link" >ADVS-002</a></div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>10</p>
+                                                            <div class="car-badge__item" style="width: 300%; top: 24px;">
+                                                                <div class="car-badge__list car-badge__list--green"  ><a href="" class="car-badge__link" >ADVS-003</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>11</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>12</p>
+                                                            <div class="car-badge__item" style="width: 200%;">
+                                                                <div class="car-badge__list car-badge__list--red"  ><a href="" class="car-badge__link" >ADVS-003</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>13</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>14</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>15</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>16</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>17</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>18</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>19</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>20</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>21</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>22</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>23</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>24</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>25</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>26</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>27</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>28</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>29</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>30</p>
+                                                        </div>
+                                                        <div class="dates linkCalendar">
+                                                            <p>31</p>
+                                                        </div>
+                                                        <div class="nextMonth linkCalendar">
+                                                            <p>1</p>
+                                                            <div></div>
+                                                        </div>
+                                                        <div class="nextMonth linkCalendar">
+                                                            <p>2</p>
+                                                            <div></div>
+                                                        </div>
+                                                        <div class="nextMonth linkCalendar">
+                                                            <p>3</p>
+                                                            <div></div>
+                                                        </div>
+                                                        <div class="nextMonth linkCalendar">
+                                                            <p>4</p>
+                                                            <div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="lay-table-wrap mt-10">
-                                        <div class="lay-table__inner">
-                                            <div class="el-table-wrap  lay-tableH--300 ui-scroller ui-table-fixHead">
-                                                <table
-                                                    class="el-table el-table--col el-table--accident el-table--acciDetail el-table-noData">
-                                                    <caption>데이터 사용 현황 테이블 순번, 사용자ID, 업로드 건수</caption>
-                                                    <colgroup>
-                                                        <col style="width:25%" />
-                                                        <col style="width:auto" />
-                                                        <col style="width:25%" />
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col">순번</th>
-                                                            <th scope="col">기관</th>
-                                                            <th scope="col">사용발생 건수</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td colspan="3" rowspan="3">검색결과가 없습니다.</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <div class="lay-boxItem lay-item--775 grids__col-6">
@@ -405,7 +527,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="lay-boxItem lay-item--775 grids__col-6">
+                            <!-- <div class="lay-boxItem lay-item--775 grids__col-6">
                                 <div class="boxItem__inner">
                                     <h5 class="boxItem__tit">
                                         데이터베이스 사용 현황
@@ -414,7 +536,7 @@
                                         </button>
                                     </h5>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -423,5 +545,12 @@
         <footer></footer>
     </div>
 </body>
-
+<script>
+    var $grid = $('.grids-bottom').isotope({
+        itemSelector: '.lay-boxItem',
+        percentPosition: true,
+        layoutMode: 'masonry',
+        
+    })
+</script>
 </html>
